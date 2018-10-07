@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.weatherDataCont {
+  background:rgba(200,200,200,0.5);
+  width: 400px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 20px;
+}
+
+.temperatureCont {
+  width: 60%;
+  display: inline-block;
+}
+
+.temperature {
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 20px;
+  color: #333;
+}
+
+.degrees {
+  font-weight: bold;
+  color: #455;
+}
+
+.wicon {
+  color: #18998e;
+}
+
+.extraInfo {
+  width: 40%;
+  display: inline-block;
+  line-height: 25px;
+  text-align: left;
+}
+
+.extraInfoText {
+  display: block;
+  color: #1d1c64;
+  font-size: 18px;
+  font-weight: bold;
+
+}

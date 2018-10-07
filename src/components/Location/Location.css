@@ -1,0 +1,12 @@
+
+.locationCont {
+  width: 100%;
+  height: 35px;
+  text-align: left;
+  padding-left: 10px;
+  color: #888;
+}
+
+.locationCont h1 {
+  margin: 0;
+}
