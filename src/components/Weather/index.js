@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import purple from '@material-ui/core/colors/purple';
 
@@ -8,34 +8,28 @@ import WeatherData from './WeatherData';
 import './Weather.css';
 import transformWeather from '../../services/transformWeather';
 
-const LOCATION = 'México';
 const API_KEY = '7a14a66681fcd335079601f52f72ac59';
-const URL_WEATHER = `http://api.openweathermap.org/data/2.5/weather?q=${LOCATION}&units=metric&appid=${API_KEY}`;
 
 class WeatherLocation extends Component {
 
-  constructor () {
-    console.log('constructor');
+  constructor (props) {
     super();
     this.state = {
-      city: 'México',
+      city: props.city,
       data: null
     }
   }
 
-  loadWeatherData = () => {
-    fetch(URL_WEATHER)
+  componentWillMount() {
+    const { city } = this.state;
+    const urlWeather = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
+    fetch(urlWeather)
       .then(data => data.json())
       .then(weatherData => {
         const data = transformWeather(weatherData);
         this.setState( {data} )
         //console.log(JSON.stringify(weatherData));
       });
-  }
-
-  componentWillMount() {
-    console.log('componentWillMount');
-    this.loadWeatherData();
   }
 
   /* componentDidMount() {
@@ -52,17 +46,18 @@ class WeatherLocation extends Component {
  */
 
   render() {
-    console.log('render');
     const {city, data} = this.state;
     return (
       <div className='weatherLocationCont'>
         <Location city={city} />
         { data ? <WeatherData data={ data } /> :
-           <CircularProgress style={{ color: purple[300] }} thickness={4} />}
+          <CircularProgress style={{ color: purple[300] }} thickness={4} />}
       </div>
     );
   }
 }
 
-
+WeatherLocation.propTypes = {
+  city: PropTypes.string,
+}
 export default WeatherLocation;
