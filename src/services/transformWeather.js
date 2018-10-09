@@ -1,10 +1,7 @@
-import {
-  CLOUD,
-  CLOUDY,
+import { CLOUDY,
   SUN,
   RAIN,
   SNOW,
-  WINDY,
   THUNDER,
   DRIZZLE
 } from '../constants/states';
