@@ -42,12 +42,12 @@ class App extends Component {
           </Col>
         </Row>
         <Row>
-          <Col xs={12} md={7}>
+          <Col xs={12} md={6}>
             <LocationList
               cities={cities}
               onSelectedLocation= { this.handleSelectionLocation } />
           </Col>
-          <Col xs={12} md={5}>
+          <Col xs={12} md={6}>
             <Paper elevation={5}>
               <div className='detail'>
               </div>

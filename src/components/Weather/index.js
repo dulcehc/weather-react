@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import purple from '@material-ui/core/colors/purple';
-
 import Location from '../Location/Location';
 import WeatherData from './WeatherData';
 import './Weather.css';
@@ -31,19 +30,6 @@ class WeatherLocation extends Component {
         //console.log(JSON.stringify(weatherData));
       });
   }
-
-  /* componentDidMount() {
-    console.log('componentDidMount');
-  }
-
-  componentWillUpdate() {
-    console.log('componentWillUpdate');
-  }
-
-  componentDidUpdate() {
-    console.log('componentDidUpdate');
-  }
- */
 
   render() {
     const { onWeatherLocationClick } = this.props;

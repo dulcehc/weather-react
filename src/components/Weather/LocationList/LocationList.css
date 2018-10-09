@@ -1,0 +1,13 @@
+.locationList {
+  margin-top: 30px;
+}
+
+/*sm, flexbox*/
+@media (max-width: 64em) {
+  .locationList {
+    max-height: 50vh;
+    overflow: auto;
+    margin-botton: 30px;
+  }
+
+}
