@@ -1,7 +1,9 @@
 .weatherLocationCont {
-  margin: 30px;
-  width: 400px;
-  padding: 15px;
+  margin-top: 50px;
+  width: calc(100% - 50px);
+  min-width: 400px;
+  padding: 25px;
+  box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   box-shadow: 10px 8px 63px -10px rgba(0,0,0,0.75);
 }
