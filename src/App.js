@@ -6,10 +6,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-
 import LocationList from './components/Weather/LocationList/LocationList';
-
+import ForecastExtended from './components/Weather/ForecastExtended/ForecastExtended';
 import './App.css';
+
 const cities = [
   'Mexico',
   'Washington',
@@ -20,13 +20,25 @@ const cities = [
 ];
 
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      city: 'New City'
+    }
+  }
+
   handleSelectionLocation = city => {
+    this.setState({
+      city
+    });
     console.log(`handleselectionlocation-app ${city}`);
   }
 
   render() {
+    const { city } = this.state;
     return (
-      <Grid>
+      <Grid fluid>
         <Row>
           <Col xs={12}>
             <AppBar>
@@ -50,6 +62,9 @@ class App extends Component {
           <Col xs={12} md={6}>
             <Paper elevation={5}>
               <div className='detail'>
+                <ForecastExtended
+                  city={city}
+                  />
               </div>
             </Paper>
           </Col>
