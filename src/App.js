@@ -11,13 +11,14 @@ import ForecastExtended from './components/Weather/ForecastExtended/ForecastExte
 import './App.css';
 
 const cities = [
-  'Mexico',
-  'Washington',
-  'Bogota',
-  'Madrid',
-  'Buenos Aires',
+  'Mexico,mx',
+  'Washington,us',
+  'Bogota,co',
+  'Madrid,es',
+  'Buenos Aires,ar',
   'Chile'
 ];
+
 
 class App extends Component {
 
@@ -32,21 +33,20 @@ class App extends Component {
     this.setState({
       city
     });
-    console.log(`handleselectionlocation-app ${city}`);
   }
 
   render() {
     const { city } = this.state;
     return (
-      <Grid fluid>
+      <Grid>
         <Row>
           <Col xs={12}>
             <AppBar>
-              <Toolbar variant="dense">
+              <Toolbar >
                 <IconButton color="inherit" aria-label="Menu">
                   <MenuIcon/>
                 </IconButton>
-                <Typography variant="h6" color="inherit">
+                <Typography variant="h5" color="inherit">
                   Weather App
                 </Typography>
               </Toolbar>
@@ -54,12 +54,12 @@ class App extends Component {
           </Col>
         </Row>
         <Row>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={12} lg={6}>
             <LocationList
               cities={cities}
               onSelectedLocation= { this.handleSelectionLocation } />
           </Col>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={12} lg={6}>
             <Paper elevation={5}>
               <div className='detail'>
                 { city && <ForecastExtended city={city} /> }

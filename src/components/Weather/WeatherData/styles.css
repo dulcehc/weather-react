@@ -8,6 +8,7 @@
   border-radius: 20px;
 }
 
+
 .temperatureCont {
   width: 60%;
   display: inline-block;
@@ -41,5 +42,19 @@
   color: #1d1c64;
   font-size: 18px;
   font-weight: bold;
+}
 
+@media (max-width: 375px) {
+  .extraInfo {
+    line-height: 15px;
+  }
+
+  .extraInfoText {
+    font-size: 15px;
+  }
+
+  .temperature {
+    font-size: 25px;
+    padding-left: 20px;
+  }
 }

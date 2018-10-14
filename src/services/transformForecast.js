@@ -1,6 +1,5 @@
 import moment from 'moment';
-import 'moment/locale/es';
-import transformWeather from './transformWeather'
+import transformWeather from './transformWeather';
 
 /** Filter data for hours 6:00am, 12pm and 18pm */
 const transformForecast = data => (
@@ -11,7 +10,7 @@ const transformForecast = data => (
   )).map(item => (
     {
       weekDay: moment.unix(item.dt).format('dddd'),
-      hour: moment.unix(item.dt).hour(),
+      hour: moment.unix(item.dt).utc().hour(),
       data: transformWeather(item)
     }
   ))

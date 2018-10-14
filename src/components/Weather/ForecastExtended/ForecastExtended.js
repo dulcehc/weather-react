@@ -41,7 +41,6 @@ class ForecastExtended extends Component {
 
   updateCity = city => {
     const urlWeather = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`;
-    console.log(urlWeather);
     fetch(urlWeather)
       .then(data => data.json())
       .then(weatherData => {
@@ -70,7 +69,7 @@ class ForecastExtended extends Component {
     return (
       <div>
         <h2 className='forecast-title'>
-          Pronóstico Extendido para {city}
+          Extended forecast for {city}
         </h2>
         { forecastData ?
           this.renderForecastItemDays(forecastData):
