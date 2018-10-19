@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import purple from '@material-ui/core/colors/purple';
 import Location from '../Location/Location';
-import WeatherData from './WeatherData';
-import './Weather.css';
+import WeatherData from './WeatherData/WeatherData';
 import transformWeather from '../../services/transformWeather';
 
-const API_KEY = '7a14a66681fcd335079601f52f72ac59';
+const API_KEY = '';
 
 class WeatherLocation extends Component {
 
@@ -35,7 +34,7 @@ class WeatherLocation extends Component {
     const { onWeatherLocationClick } = this.props;
     const {city, data} = this.state;
     return (
-      <div className='weatherLocationCont' onClick={onWeatherLocationClick}>
+      <div className='WeatherLocation' onClick={onWeatherLocationClick}>
         <Location city={city} />
         { data ? <WeatherData data={ data } /> :
           <CircularProgress style={{ color: purple[300] }} thickness={4} />}

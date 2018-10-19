@@ -1,14 +1,12 @@
-.locationList {
+.LocationList {
   height: 85vh;
   overflow: auto;
   margin-top: 64px;
-}
 
-/*sm, flexbox*/
-@media (max-width: 64em) {
-  .locationList {
+  /*sm, flexbox*/
+  @media (max-width: 64em) {
     max-height: 50vh;
     margin-bottom: 20px;
   }
-
 }
+

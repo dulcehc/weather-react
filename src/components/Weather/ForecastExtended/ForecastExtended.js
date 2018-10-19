@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import './ForecastExtended.css';
-import ForecastItem from './ForecastItem/ForecastItem';
+import ForecastItem from './ForecastItem';
 import transformForecast from './../../../services/transformForecast';
 
 /* const days = [
@@ -67,8 +66,8 @@ class ForecastExtended extends Component {
     const {city} = this.props;
     const { forecastData } = this.state;
     return (
-      <div>
-        <h2 className='forecast-title'>
+      <div className='ForecastExtended'>
+        <h2 className='ForecastExtended__title'>
           Extended forecast for {city}
         </h2>
         { forecastData ?

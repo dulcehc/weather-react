@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.App .detail {
+  background: linear-gradient(45deg, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  height: 85vh;
+  width: calc(100% - 40px);
+  margin-top: 64px;
+  overflow: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+@media (max-width: 64em) {
+  .App .detail {
+    height: 40vh;
+  }
+}
+
+.ExtraInfo {
+  width: 40%;
+  display: inline-block;
+  line-height: 25px;
+  text-align: left;
+}
+.ExtraInfo__text {
+  display: block;
+  color: #1d1c64;
+  font-size: 18px;
+  font-weight: bold;
+}
+@media (max-width: 375px) {
+  .ExtraInfo__text {
+    font-size: 15px;
+  }
+}
+@media (max-width: 375px) {
+  .ExtraInfo {
+    line-height: 15px;
+  }
+}
+
+.ForecastExtended__title {
+  color: black;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.Location {
+  width: 100%;
+  height: 35px;
+  text-align: left;
+  padding-left: 10px;
+  color: #888;
+}
+.Location__title {
+  margin: 0;
+}
+
+.LocationList {
+  height: 85vh;
+  overflow: auto;
+  margin-top: 64px;
+  /*sm, flexbox*/
+}
+@media (max-width: 64em) {
+  .LocationList {
+    max-height: 50vh;
+    margin-bottom: 20px;
+  }
+}
+
+.Temperature {
+  width: 60%;
+  display: inline-block;
+}
+.Temperature__degrees {
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 20px;
+  color: #333;
+}
+.Temperature__symbol {
+  font-weight: bold;
+  color: #455;
+}
+.Temperature__icon {
+  color: #18998e;
+}
+@media (max-width: 375px) {
+  .Temperature {
+    font-size: 25px;
+    padding-left: 20px;
+  }
+}
+
+.WeatherData {
+  background: rgba(200, 200, 200, 0.5);
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 20px;
+}
+
+.WeatherLocation {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(100% - 20px);
+  min-width: 430px;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: 10px 8px 63px -10px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+@media (max-width: 425px) {
+  .WeatherLocation {
+    min-width: 300px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

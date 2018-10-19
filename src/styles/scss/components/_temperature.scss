@@ -1,0 +1,29 @@
+.Temperature {
+  width: 60%;
+  display: inline-block;
+
+  &__degrees {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+    color: #333;
+  }
+
+  &__symbol {
+    font-weight: bold;
+    color: #455;
+  }
+
+  &__icon {
+    color: #18998e;
+  }
+  @media (max-width: 375px) {
+    font-size: 25px;
+    padding-left: 20px;
+  }
+}
+
+
+
+
+

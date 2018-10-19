@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import WeatherData from './../../WeatherData';
+import WeatherData from '../WeatherData/WeatherData';
 
 const data = {
   temperature: 10,

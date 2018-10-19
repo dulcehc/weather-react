@@ -1,0 +1,25 @@
+.ExtraInfo {
+  width: 40%;
+  display: inline-block;
+  line-height: 25px;
+  text-align: left;
+
+  &__text {
+    display: block;
+    color: #1d1c64;
+    font-size: 18px;
+    font-weight: bold;
+
+    @media (max-width: 375px) {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    line-height: 15px;
+  }
+}
+
+
+
+

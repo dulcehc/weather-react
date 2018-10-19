@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Temperature from './Temperature';
 import ExtraInfo from './ExtraInfo';
-import './styles.css';
+
 
 const WeatherData = ({ data }) => {
   const { temperature, weatherState, humidity, wind } = data;
   return (
-    <div className='weatherDataCont'>
+    <div className='WeatherData'>
       <Temperature temperature={temperature} weatherState={weatherState}/>
       <ExtraInfo humidity={humidity} wind={wind} />
     </div>

@@ -11,7 +11,7 @@ import {
   DRIZZLE
 } from '../../../constants/states';
 import PropTypes from 'prop-types';
-import './styles.css';
+
 
 const stateToIconName = weatherState => {
   switch (weatherState) {
@@ -40,15 +40,15 @@ const getWeatherIcon = weatherState => {
   return (<WeatherIcons
             name={stateToIconName(weatherState)}
             size="3x"
-            className="wicon"/>);
+            className="Temperature__icon"/>);
 };
 
 const Temperature = ({temperature, weatherState}) => {
   return (
-    <div className='temperatureCont'>
+    <div className='Temperature'>
       {getWeatherIcon(weatherState)}
-      <span className='temperature'>{temperature}</span>
-      <span className='degrees'>°C</span>
+      <span className='Temperature__degrees'>{temperature}</span>
+      <span className='Temperature__symbol'>°C</span>
     </div>
   )
 }

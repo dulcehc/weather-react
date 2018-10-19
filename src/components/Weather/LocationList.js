@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import WeatherLocation from './../index';
-import './LocationList.css';
+import WeatherLocation from './WeatherLocation';
 
 const LocationList = ({cities, onSelectedLocation}) => {
   const handleWeatherLocationClick = city => {
     onSelectedLocation(city);
   }
   return (
-    <div className='locationList'>
+    <div className='LocationList'>
       {cities.map(city => (
         <WeatherLocation
           city={city}
