@@ -5,8 +5,8 @@ import purple from '@material-ui/core/colors/purple';
 import Location from '../Location/Location';
 import WeatherData from './WeatherData/WeatherData';
 import transformWeather from '../../services/transformWeather';
+import API_KEY from '../../constants/api-key';
 
-const API_KEY = '';
 
 class WeatherLocation extends Component {
 
@@ -20,7 +20,8 @@ class WeatherLocation extends Component {
 
   componentWillMount() {
     const { city } = this.state;
-    const urlWeather = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
+    const urlWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
+
     fetch(urlWeather)
       .then(data => data.json())
       .then(weatherData => {

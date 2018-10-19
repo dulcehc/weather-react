@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ForecastItem from './ForecastItem';
 import transformForecast from './../../../services/transformForecast';
+import API_KEY from '../../../constants/api-key';
 
 /* const days = [
   'Lunes',
@@ -18,7 +19,6 @@ const data = {
   wind: 'normal',
 }; */
 
-const API_KEY = '7a14a66681fcd335079601f52f72ac59';
 
 class ForecastExtended extends Component {
   constructor() {
@@ -39,7 +39,7 @@ class ForecastExtended extends Component {
   }
 
   updateCity = city => {
-    const urlWeather = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`;
+    const urlWeather = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`;
     fetch(urlWeather)
       .then(data => data.json())
       .then(weatherData => {

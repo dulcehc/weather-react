@@ -10,7 +10,7 @@ import LocationList from './Weather/LocationList';
 import ForecastExtended from './Weather/ForecastExtended/ForecastExtended';
 
 const cities = [
-  'Mexico,mx',
+  'Mexico City,mx',
   'Washington,us',
   'Bogota,co',
   'Madrid,es',
